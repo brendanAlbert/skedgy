@@ -1,0 +1,11 @@
+.bub {
+    border-radius: 30px;
+    border: 4px solid goldenrod;
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 14px;
+    min-width: 115px;
+    text-align: center;
+    /* width: auto; */
+}
