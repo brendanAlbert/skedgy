@@ -1,0 +1,44 @@
+.courses-container {
+
+    width: 90%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.course-grid {
+    
+    display: grid;
+
+    grid-template-columns: repeat(9, 1fr);
+
+    grid-gap: 20px;
+}
+
+.course {
+
+    width: 80px;
+    
+    height: 80px;
+
+    background-color: #333;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    cursor: grab;
+}

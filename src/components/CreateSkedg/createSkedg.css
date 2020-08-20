@@ -1,0 +1,86 @@
+.skedg-container {
+	/* font-family: "Nunito Sans", sans-serif; */
+
+	display: flex;
+
+	flex-direction: column;
+
+	justify-content: center;
+
+	align-items: center;
+
+    transition: all 0.3s;
+    
+    margin: 30px auto;
+}
+
+.schedules-container {
+	display: flex;
+
+	width: 100%;
+
+	max-width: 1000px;
+
+	flex-direction: column;
+
+	justify-content: space-around;
+
+	align-items: center;
+}
+
+.schedule {
+	display: flex;
+	/* width: 90%; */
+	min-width: 750px;
+	padding: 30px 50px;
+	/* border-radius: 70px; */
+	margin: 10px auto;
+	justify-content: space-between;
+	align-items: center;
+	/* border: 1px solid #333; */
+	background-color: #333;
+	color: white;
+}
+
+.choices-container {
+	display: flex;
+}
+
+.period {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 10px;
+	opacity: 0.4;
+	width: 65px;
+	height: 65px;
+	margin: 0 5px;
+	border: 2px dashed goldenrod;
+}
+
+#add_schedule {
+	font-size: 40px;
+	display: flex;
+	/* width: 35%; */
+	min-width: 200px;
+	padding: 0px 30px;
+	border-radius: 70px;
+	margin: 10px auto;
+	justify-content: center;
+	align-items: center;
+	/* border: 1px solid darkgreen; */
+	/* background-color: darkgreen; */
+	background-color: goldenrod;
+	color: white;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+#add_schedule:hover {
+	background-color: #27ae60;
+}
+
+#add_schedule span {
+	font-size: 20px;
+	padding-left: 20px;
+}

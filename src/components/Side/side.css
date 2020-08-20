@@ -7,3 +7,34 @@
 	text-align: center;
 	font-family: "Nunito Sans", sans-serif;
 }
+
+.side-btn {
+
+    cursor: pointer;
+
+    border-radius: 30px;
+
+    background-color: #333;
+
+    padding: 14px;
+
+    border: 4px solid goldenrod;
+
+    color: white;
+
+    min-width: 85%;
+
+    max-width: 85%;
+
+    margin: 5px auto;
+
+    transition: 0.2s;
+}
+
+.side-btn:hover {
+
+    transition: 0.2s;
+
+    background-color: #27ae60;
+
+}
