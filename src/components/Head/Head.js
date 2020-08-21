@@ -1,28 +1,26 @@
-import React, { Fragment } from 'react'
-import './head.css'
+import React, { Fragment } from "react";
+import "./head.css";
 
 const Head = () => {
+	return (
+		<Fragment>
+			<div className="head-container">
+				<h1>Welcome to Skedgy!</h1>
 
-    return (
-        <Fragment>
+				<h2>I am a:</h2>
 
-            <h1>Welcome to Skedgy!</h1>
+				<div className="grade-level-container">
+					<p className="bub">freshman</p>
+					<p className="bub">sophomore</p>
+					<p className="bub">junior</p>
+					<p className="bub">senior</p>
+				</div>
+			</div>
+		</Fragment>
+	);
+};
 
-            <h2>I am a:</h2>
-
-            <p className="bub">freshman</p>
-            <p className="bub">sophomore</p>
-            <p className="bub">junior</p>
-            <p className="bub">senior</p>
-
-
-           
-
-        </Fragment>
-    )
-}
-
-export default Head
+export default Head;
 
 /*
  <div className="grade-level-container">
