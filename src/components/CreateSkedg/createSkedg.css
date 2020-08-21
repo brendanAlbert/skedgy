@@ -1,5 +1,6 @@
 .skedg-container {
-	/* font-family: "Nunito Sans", sans-serif; */
+
+    width: 95%;
 
 	display: flex;
 
@@ -49,13 +50,19 @@
 .period {
 	display: flex;
 	justify-content: center;
-	align-items: flex-end;
+    /* align-items: flex-end; */
+    align-items: center;
 	font-size: 10px;
-	opacity: 0.4;
+	/* opacity: 0.4; */
 	width: 65px;
 	height: 65px;
 	margin: 0 5px;
-	border: 2px dashed goldenrod;
+    border: 2px dashed goldenrod;
+    cursor: pointer;
+}
+
+.period:hover {
+    opacity: 1;
 }
 
 #add_schedule {
@@ -83,4 +90,43 @@
 #add_schedule span {
 	font-size: 20px;
 	padding-left: 20px;
+}
+
+.occupied {
+    opacity: 1;
+}
+
+.available {
+    opacity: 0.4;
+}
+
+.addPeriodIcon {
+    /* font-size: 50px; */
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addPeriodIcon span {
+    width: 20px;
+    height: 5px;
+    background-color: white;
+}
+
+.addPeriodIcon span:nth-child(2) {
+    position: absolute;
+    transform: rotate(90deg);
+}
+
+.period-time {
+    font-size: 10px;
+    opacity: 0.5;
+    text-align: center;
+    color: white;
+    margin-top: 4px;
 }

@@ -18,7 +18,27 @@ const CreateSkedg = () => {
 		} else if (choices.length === 3) {
 			setChoices([...choices, "4th"]);
 		}
-	};
+    };
+    
+    // function onDragOver(event) {
+    //     event.preventDefault()
+    // }
+
+    // function onDrop(event) {
+    //     let id = event.dataTransfer.getData('text')
+    //     console.log('id = ')
+    //     console.log(id)
+    //     const draggableElement = document.getElementById(id)
+    //     const dropzone = event.target
+
+    //     console.log('draggableElement')
+    //     console.log(draggableElement)
+    //     // dropzone.innerHTML = '';
+    //     dropzone.appendChild(draggableElement)
+    //     dropzone.style.opacity = 1
+        
+    //     event.dataTransfer.clearData()
+    // }
 
 	return (
 		<Fragment>
@@ -32,9 +52,17 @@ const CreateSkedg = () => {
 								<h3>{schedj} choice</h3>
 								<div className="choices-container">
 									{periods.map((period, idx) => (
-										<div key={idx} className="period">
-											{period} period
-										</div>
+                                        <div className="period-container">
+                                            <div key={idx} className="period available">
+                                                <div className="addPeriodIcon">
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div className="period-time">
+                                                {period} period
+                                            </div>
+                                        </div>
 									))}
 								</div>
 							</div>

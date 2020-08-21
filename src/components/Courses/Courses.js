@@ -1,14 +1,15 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./courses.css";
+import algebra1 from './algebra_1.png'
+// import algebra2 from './algebra_2.png'
 
 const Courses = () => {
 
-    // let periods = [0, 1, 2, 3, 4, 5, 6];
-    let courses = [
+    let initial_courses = [
         'algebra 1',
         'algebra 2',
         'geometry',
-        'pre-calculus with trigonometry',
+        'pre-calc + trig',
         'english 9',
         'english 10',
         'english 11',
@@ -21,32 +22,44 @@ const Courses = () => {
         'physical education',
     ]
 
-	// const [choices, setChoices] = useState([]);
+    const [filterBy, setFilterBy] = useState('');
+    const [filteredCourses, setFilteredCourses] = useState(initial_courses);
 
-	// const handleAdd = () => {
+    const handleChange = (event) => {
+        // this.setState({ filterby : event.target.value })
+        console.log(`setting filter to : ${event.target.value}`)
+        setFilterBy(event.target.value);
 
-	// 	if (choices.length === 0) {
-	// 		setChoices([...choices, "1st"]);
-	// 	} else if (choices.length === 1) {
-	// 		setChoices([...choices, "2nd"]);
-	// 	} else if (choices.length === 2) {
-	// 		setChoices([...choices, "3rd"]);
-	// 	} else if (choices.length === 3) {
-	// 		setChoices([...choices, "4th"]);
-	// 	}
-	// };
+        let newfilteredCourses = initial_courses.filter( course => course.includes(event.target.value))
+        setFilteredCourses(newfilteredCourses);
+    }
 
 	return (
 		<Fragment>
 			<div className="courses-container">
-				<h4>Here are all available courses</h4>
+				<h4 className="title">Filter by available courses</h4>
+
+                <div className="filter-container">
+                    <input type="text" value={filterBy} onChange={handleChange}/>
+                    { filterBy !== '' && ( 
+                        <p>filtering by : {filterBy}</p>
+                        )
+                    }
+                </div>
 
 				<div className="course-grid">
-					{courses.length > 0 &&
-						courses.map((course, index) => (
-							<div key={index} className="course">
-								<h6>{course}</h6>
+					{filteredCourses.length > 0 &&
+						filteredCourses.map((course, index) => (
+							// <div key={index} className="course" id={index}>
+							// 	<h6>{course}</h6>
+                            //     {/* <img id={'algebra'+index} className="course-img" src={algebra1} alt="course"/> */}
+							// </div>
+							<div key={index} className="course-chip" id={index}>
+                                <img id={'algebra'+index} className="course-chip__img" src={algebra1} alt="course"/>
+								<p>{course}</p>
 							</div>
+
+                            
 						))}
 				</div>
 			</div>
