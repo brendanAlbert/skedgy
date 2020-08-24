@@ -1,5 +1,18 @@
 .main-container {
-	height: 90vh;
+	/* height: 90vh; */
 	margin: 30px auto;
 	text-align: center;
+}
+
+.main-container h2 {
+	max-width: 80%;
+	text-align: center;
+	margin: 30px auto;
+}
+
+@media screen and (max-width: 400px) {
+	.main-container h2 {
+		font-size: 14px;
+	}
+
 }

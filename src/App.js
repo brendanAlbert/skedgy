@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Head from "./components/Head/Head";
-import Side from "./components/Side/Side";
+// import Side from "./components/Side/Side";
 import Main from "./components/Main/Main";
 import Provider from './context/Provider'
 
@@ -14,9 +14,9 @@ const App = () => {
                     <div className="top-nav">
                         <Head />
                     </div>
-                    <div className="left-nav">
+                    {/* <div className="left-nav">
                         <Side />
-                    </div>
+                    </div> */}
                     <div className="main-content">
                         <Main />
                     </div>

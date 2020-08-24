@@ -2,14 +2,6 @@
 	width: 90%;
 
 	margin: 0 auto;
-	/* 
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-	align-items: center; */
 	
 	transition: all 0s linear;
 }
@@ -47,12 +39,10 @@
 .course-chip {
 	position: relative;
 	display: flex;
-	/* padding: 0 25px; */
 	padding-right: 25px;
 	color: white;
 	height: 50px;
 	font-size: 9px;
-	/* line-height: 50px; */
 	border-radius: 25px;
 	background-color: #333;
 	justify-content: flex-end;
@@ -74,7 +64,7 @@ input {
 
 	padding: 10px 30px;
 
-	font-size: 18px;
+	font-size: 20px;
 
 	border-radius: 25px;
 
@@ -101,6 +91,8 @@ input:focus {
 .course-info {
 	display: flex;
 	justify-content: flex-end;
+	width: 60%;
+	text-align: end;
 }
 
 .red {
@@ -119,6 +111,20 @@ input:focus {
 	background-color: #ff7f50;
 }
 
+.orange {
+	background-color: #ffa502;
+}
+
+.blue {
+	background-color: #1e90ff;
+}
+
+.lightblue {
+	background-color: #70a1ff;
+}
+
+
+
 .filter-general-options-container {
 	display: flex;
 	flex-direction: column;
@@ -135,9 +141,7 @@ input:focus {
 }
 
 .filter-requirements-pills-container {
-	/* display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); */
-	/* display: flex; */
+	
 	position: relative;
 	margin: 15px auto;
 	flex-direction: column;
@@ -149,7 +153,8 @@ input:focus {
 }
 
 .filter-requirements-pills-container p {
-	line-height: 0px;
+	line-height: 1;
+	max-width: 85%;
 }
 
 
@@ -181,10 +186,11 @@ input:focus {
 	right: 0;
 	bottom: 0;
 	background-color: #ccc;
-	/* background-color: #333; */
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
+
+/* .slider:focus { outline: 0; } */
 
 .slider:before {
 	position: absolute;
@@ -198,35 +204,46 @@ input:focus {
 	transition: 0.4s;
 }
 
+/* .slider:before:focus { outline: 0;} */
+
 input:checked + .slider {
 	/* background-color: #2196F3; */
 	background-color: goldenrod;
 }
 
-/* input:focus + .slider {
+/* input:checked + .slider:focus { outline: 0;} */
 
-} */
+
 
 input:checked + .slider:before {
 	-webkit-transform: translateX(16px);
 	-ms-transform: translateX(16px);
 	transform: translateX(16px);
+	outline: 0;
+}
+input:checked:focus + .slider:before {
+	/* -webkit-transform: translateX(16px);
+	-ms-transform: translateX(16px);
+	transform: translateX(16px); */
+	outline: 0;
+	
 }
 
 .slider.round {
 	border-radius: 34px;
+	outline: 0;
+	-webkit-tap-highlight-color: transparent
 }
 
 .slider.round:before {
 	border-radius: 50%;
+	outline: 0;
 }
 
 .toggle-widget {
 	display: flex;
 	justify-content: space-between;
 	width: 90px;
-	/* background-color: #aaa; */
-	/* border: 1px solid red; */
 	padding: 10px;
 	border-radius: 25px;
 }
@@ -246,11 +263,14 @@ input:checked + .slider:before {
 	background-color: #ff4757;
 	border: 2px solid #ff4757;
 	box-shadow: 1px 2px 0px 1px #ccc;
+	-webkit-tap-highlight-color: transparent
 }
 
 .reset-btn:active {
 	transform: translateY(2px);
 	box-shadow: 1px 1px 0px 0px #ccc;
+	transition: transform 0.1s linear;
+	-webkit-tap-highlight-color: transparent
 }
 
 .reset-btn:focus {
@@ -268,7 +288,7 @@ input:checked + .slider:before {
 }
 
 .first-filter-inner-row {
-	/* pointer-events: none; */
+	margin-top: 20px;
 	position: relative;
 	width: 90%;
 	display: flex;
@@ -296,6 +316,7 @@ input:checked + .slider:before {
 	align-items: center;
 	outline: none;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent
 }
 
 .hide-show-btn:hover {
@@ -303,55 +324,116 @@ input:checked + .slider:before {
 }
 
 .hide {
-	/* max-height: 0;
-	padding: 0px;
-	margin: 0px;
-	overflow: hidden;
-	transform-origin: top;
-	transform: scale(0);
-	transition: max-height 0.3s ease-in-out, padding 0s linear, margin 0s linear, opacity 0s linear, transform 0s linear; */
-
-
-	/* transform: scaleY(0);
-	opacity: 0;
-	max-height: 0;
-	padding: 0; */
 
 	position: relative;
-	/* z-index: 0; */
 	opacity: 0;
-	/* flex: 0; */
-	max-height: 0;
-	transition: max-height 0.3s ease, opacity 0.2s ease;
+	margin: 0;
+	
+	max-height: 0px;
+	transition: max-height 0.3s ease, opacity 0s ease, margin 0.4s ease;
 
-
-	/* transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out,  */
 }
 
 .show {
-	/* overflow: hidden;
-	transition: transform 0.3 ease-out;
-	max-height: auto;
-	opacity: 1;
-	transform: scaleY(1);
-	transform-origin: top; */
-
+	
 	position: relative;
-	/* z-index: 2; */
 	opacity: 1;
-	/* overflow: hidden; */
 	transition: flex 0.3s ease, max-height 0.3s ease, opacity 0.2s ease;
+	max-height: 80px;
+}
+
+.first-filter-inner-row.show {
 	max-height: 50px;
-	/* flex: 1; */
+}
+
+@media screen and (max-width: 740px) {
+
+	.show {
+		max-height: 140px;
+	}
+
+	.first-filter-inner-row.show {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 40px auto;
+		max-height: 70px;
+	}
+
+	.first-filter-inner-row.show input {
+		width: 90%;
+	}
+
+	.filter-general-options-container {
+		margin: 10px auto;
+	}
+	.first-filter-inner-row.hide {
+		margin: 0px;
+	}
+}
 
 
-	/* transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out,  */
-/* 	
-	max-height: 90px;
-	transform: scale(1);
-	transition: max-height 0.3s ease-in-out, transform 0.3s linear; */
+@media screen and (max-width: 440px) {
+
+	.show {
+		max-height: 200px;
+	}
 }
 
 .periods-inner, .requirements-inner {
 	width: 90%;
+}
+
+.periods-inner.hide .requirements-toggle-container, 
+.requirements-inner.hide .requirements-toggle-container {
+	pointer-events: none;
+}
+
+.course-grid-wrapper {
+	padding: 30px;
+	min-height: 150px;
+	background-color: #efefef;
+	border-radius: 10px;
+	margin-bottom: 60px;
+}
+
+.fade-enter {
+	opacity: 0.01;
+	/* -webkit-animation: fadein 1s;
+	-moz-animation: fadein 1s;
+	animation: fadein 1s; */
+}
+
+.fade-enter-active {
+	opacity: 1;
+	transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+	opacity: 1;
+}
+
+.fade-exit-active {
+	opacity: 0.01;
+	transition: opacity 500ms ease-in;
+}
+
+.fadeIn {
+	-webkit-animation: fadein 2s;
+	-moz-animation: fadein 2s;
+	animation: fadein 2s;
+}
+
+@keyframes fadein {
+	from { opacity: 0;}
+	to { opacity: 2;}
+}
+@-moz-keyframes fadein {
+	from { opacity: 0;}
+	to { opacity: 2;}
+}
+@-webkit-keyframes fadein {
+	from { opacity: 0;}
+	to { opacity: 2;}
 }

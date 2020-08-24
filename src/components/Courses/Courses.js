@@ -2,8 +2,267 @@ import React, { Fragment, useState, useEffect } from "react";
 import "./courses.css";
 // import algebra1 from "./algebra_1.png";
 // import algebra2 from './algebra_2.png'
+// import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
-const Courses = () => {
+const CourseChip = ({ course, index, wait }) => {
+
+	const [show, setShow] = useState(false)
+	useEffect(()=>{
+		setTimeout(()=>{
+			setShow(true)
+		}, wait)
+		// eslint-disable-next-line
+	},[])
+
+	const getCourseClassNameAndColor = (course) => {
+		if (course["a-g_satisfies"].includes("A")) {
+			return `orange info-sphere`;
+		} else if (course["a-g_satisfies"].includes("B")) {
+			return `blue info-sphere`;
+		} else if (course["a-g_satisfies"].includes("C")) {
+			return `red info-sphere`;
+		} else if (course["a-g_satisfies"].includes("D")) {
+			return `purple info-sphere`;
+		} else if (course["a-g_satisfies"].includes("E")) {
+			return `green info-sphere`;
+		} else if (course["a-g_satisfies"].includes("F")) {
+			return `coral info-sphere`;
+		} else if (course["a-g_satisfies"].includes("G")) {
+			return `lightblue info-sphere`;
+		}
+	};
+
+	return (
+		
+		 show === true && (
+				<div 
+					
+					key={index} className="course-chip fadeIn" id={index}>
+						<div
+							className={getCourseClassNameAndColor(
+								course
+							)}
+						></div>
+						<p className="course-info">{course["course name"]}</p>
+					</div>
+
+		)
+	)
+}
+
+const Courses = ( { gradeLevel }) => {
+
+	let chosenGradeLevel = [gradeLevel]
+
+	let history_soc_sci_courses = [
+		{
+			"course name": "American Government",
+			"course code": "H600",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "American Government Online",
+			"course code": "H600E",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "AP European History",
+			"course code": "H986",
+			prereq: null,
+			"grade levels": [10,11,12],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "AP Govt + Politics U.S.",
+			"course code": "H966",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "AP Human Geography",
+			"course code": "H900",
+			prereq: null,
+			"grade levels": [9,10,11,12],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "AP U.S. History",
+			"course code": "H996",
+			prereq: null,
+			"grade levels": [11],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "History of the Americas IB",
+			"course code": "H985",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "U.S. History",
+			"course code": "H500",
+			prereq: null,
+			"grade levels": [11],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "U.S. History Online",
+			"course code": "H500E",
+			prereq: null,
+			"grade levels": [11],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "World History",
+			"course code": "H400",
+			prereq: null,
+			"grade levels": [10],
+			"a-g_satisfies": "A",
+		},
+		{
+			"course name": "World History Online",
+			"course code": "H400E",
+			prereq: null,
+			"grade levels": [10],
+			"a-g_satisfies": "A",
+		},
+	]
+
+	let english_courses = [
+		{
+			"course name": "AP English Lang. + Comp.",
+			"course code": "L512",
+			prereq: null,
+			"grade levels": [11],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "AP English Lit. + Comp.",
+			"course code": "L996",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "CSU Expository Reading + Writing",
+			"course code": "",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "ELD Tran Eng 9",
+			"course code": "",
+			prereq: null,
+			"grade levels": [9],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "ELD Tran Eng 10",
+			"course code": "",
+			prereq: null,
+			"grade levels": [10],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "ELD Tran Eng 11",
+			"course code": "",
+			prereq: null,
+			"grade levels": [11],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "ELD Tran Eng 12",
+			"course code": "",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 9 + the Performing Arts",
+			"course code": "L310",
+			prereq: null,
+			"grade levels": [9],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 9",
+			"course code": "L300",
+			prereq: null,
+			"grade levels": [9],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 9 Honors",
+			"course code": "L309",
+			prereq: null,
+			"grade levels": [9],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 10",
+			"course code": "L400",
+			prereq: null,
+			"grade levels": [10],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 10 Honors",
+			"course code": "L409",
+			prereq: null,
+			"grade levels": [10],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 11",
+			"course code": "L500",
+			prereq: null,
+			"grade levels": [11],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 11 Online",
+			"course code": "L500E",
+			prereq: null,
+			"grade levels": [11],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English IB HL1",
+			"course code": "",
+			prereq: null,
+			"grade levels": [11],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English IB SL",
+			"course code": "",
+			prereq: null,
+			"grade levels": [11,12],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 12",
+			"course code": "L660",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "B",
+		},
+		{
+			"course name": "English 12 Online",
+			"course code": "L660E",
+			prereq: null,
+			"grade levels": [12],
+			"a-g_satisfies": "B",
+		},
+	]
+
 	let math_courses = [
 		{
 			"course name": "Math 1A",
@@ -108,6 +367,13 @@ const Courses = () => {
 			"course code": "N994",
 			prereq: "Precalc/Trig (C or better)",
 			"grade levels": [10, 11, 12],
+			"a-g_satisfies": "C",
+		},
+		{
+			"course name": "AP Computer Science A",
+			"course code": "N996",
+			prereq: "",
+			"grade levels": [11, 12],
 			"a-g_satisfies": "C",
 		},
 	];
@@ -217,6 +483,13 @@ const Courses = () => {
 			prereq: "AP Calculus completed or concurrent enrollment",
 			"grade levels": [11, 12],
 			"a-g_satisfies": "D - physical",
+		},
+		{
+			"course name": "AP Computer Science Principles",
+			"course code": "S995",
+			prereq: "",
+			"grade levels": [9, 10, 11, 12],
+			"a-g_satisfies": "D",
 		},
 	];
 
@@ -548,18 +821,91 @@ const Courses = () => {
 		},
 	]
 
+	let elective_courses = [
+		{
+			"course name": "Foundations of Tech & Engineering",
+			"course code": "O605",
+			prereq: null,
+			"grade levels": [9, 10, 11, 12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "Adv. Tech & Engineering",
+			"course code": "O594",
+			prereq: "Foundations of Tech & Engineering",
+			"grade levels": [10, 11, 12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "Professional Internship",
+			"course code": "O252",
+			prereq: "Foundations of Tech & Engineering",
+			"grade levels": [10, 11, 12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "AP Macroeconomics",
+			"course code": "H630",
+			prereq: "",
+			"grade levels": [12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "Psychology",
+			"course code": "H701",
+			prereq: "",
+			"grade levels": [10,11,12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "Psychology Online",
+			"course code": "H701E",
+			prereq: "",
+			"grade levels": [10,11,12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "AP Psychology",
+			"course code": "H956",
+			prereq: "",
+			"grade levels": [11,12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "Theory of Knowledge IB",
+			"course code": "H702",
+			prereq: "",
+			"grade levels": [12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "Journalism",
+			"course code": "L920",
+			prereq: "",
+			"grade levels": [9,10,11,12],
+			"a-g_satisfies": "G",
+		},
+		{
+			"course name": "Model UN Honors",
+			"course code": "H401",
+			prereq: "",
+			"grade levels": [10,11,12],
+			"a-g_satisfies": "G",
+		},
+	]
+
 	let requirements = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 	let periods = [0,1,2,3,4,5,6]
 
-	// let mathCourseNames = math_courses.map((course) => course["course name"]);
-	// let scienceCourseNames = science_courses.map(
-	// 	(course) => course["course name"]
-	// );
+	let histsocCourses = history_soc_sci_courses.map((course) => course);
+	let englishCourses = english_courses.map((course) => course);
 
 	let mathCourses = math_courses.map((course) => course);
 	let scienceCourses = science_courses.map((course) => course);
 	let languageCourses = language_courses.map((course) => course);
 	let artCourses = art_courses.map((course) => course);
+
+	let electiveCourses = elective_courses.map((course) => course);
 
 	const [filterBy, setFilterBy] = useState("");
 	const [filteredCourses, setFilteredCourses] = useState([]);
@@ -568,90 +914,159 @@ const Courses = () => {
 	const [filterPeriodsToggled, setFilterPeriodsToggle] = useState(false)
 	const [filterRequirementsToggled, setFilterRequirementsToggle] = useState(false)
 
+	const [toggledPeriods, setToggledPeriods] = useState({
+		'0' : false,
+		'1' : false,
+		'2' : false,
+		'3' : false,
+		'4' : false,
+		'5' : false,
+		'6' : false,
+	})
+	const [toggledRequirements, setToggledRequirements] = useState({
+		'A' : false,
+		'B' : false,
+		'C' : false,
+		'D' : false,
+		'E' : false,
+		'F' : false,
+		'G' : false,
+
+	})
+
 	const handleChange = (event) => {
 		setFilterBy(event.target.value);
 
 		let allFilteredCourses = [];
 
-		// let mathfilteredCourses = mathCourseNames.filter((course_name) =>
-		// 	course_name.toLowerCase().includes(event.target.value.toLowerCase())
-		// );
-		// let sciencefilteredCourses = scienceCourseNames.filter((course_name) =>
-		// 	course_name.toLowerCase().includes(event.target.value.toLowerCase())
-		// );
-
+		let histsocfilteredCourses = histsocCourses.filter((course) =>
+			course["course name"]
+				.toLowerCase()
+				.includes(event.target.value.toLowerCase()) && course['grade levels'].includes(gradeLevel))
+		let englishfilteredCourses = englishCourses.filter((course) =>
+			course["course name"]
+				.toLowerCase()
+				.includes(event.target.value.toLowerCase()) && course['grade levels'].includes(gradeLevel))
 		let mathfilteredCourses = mathCourses.filter((course) =>
 			course["course name"]
 				.toLowerCase()
-				.includes(event.target.value.toLowerCase())
-		);
+				.includes(event.target.value.toLowerCase()) && course['grade levels'].includes(gradeLevel))
 		let sciencefilteredCourses = scienceCourses.filter((course) =>
 			course["course name"]
 				.toLowerCase()
-				.includes(event.target.value.toLowerCase())
-		);
+				.includes(event.target.value.toLowerCase()) && course['grade levels'].includes(gradeLevel))
 		let languagefilteredCourses = languageCourses.filter((course) =>
 			course["course name"]
 				.toLowerCase()
-				.includes(event.target.value.toLowerCase())
-		);
+				.includes(event.target.value.toLowerCase()) && course['grade levels'].includes(gradeLevel))
 		let artfilteredCourses = artCourses.filter((course) =>
 			course["course name"]
 				.toLowerCase()
-				.includes(event.target.value.toLowerCase())
-		);
+				.includes(event.target.value.toLowerCase()) && course['grade levels'].includes(gradeLevel))
+		let electivefilteredCourses = electiveCourses.filter( course => 
+			course["course name"]
+				.toLowerCase()
+				.includes(event.target.value.toLowerCase()) && course['grade levels'].includes(gradeLevel))
 
+		allFilteredCourses = allFilteredCourses.concat(histsocfilteredCourses);
+		allFilteredCourses = allFilteredCourses.concat(englishfilteredCourses);
 		allFilteredCourses = allFilteredCourses.concat(mathfilteredCourses);
 		allFilteredCourses = allFilteredCourses.concat(sciencefilteredCourses);
 		allFilteredCourses = allFilteredCourses.concat(languagefilteredCourses);
 		allFilteredCourses = allFilteredCourses.concat(artfilteredCourses);
+		allFilteredCourses = allFilteredCourses.concat(electivefilteredCourses);
 
 		setFilteredCourses(allFilteredCourses);
 	};
 
-	useEffect(() => {
+	const showAllCourses = () => {
 		let allFilteredCourses = [];
 
-		// let mathfilteredCourses = mathCourseNames.filter((course_name) =>
-		// 	course_name.toLowerCase().includes("")
-		// );
-		// let sciencefilteredCourses = scienceCourseNames.filter((course_name) =>
-		// 	course_name.toLowerCase().includes("")
-		// );
+		console.log('grade level is ' + chosenGradeLevel)
 
+		let histsocfilteredCourses = histsocCourses.filter((course) =>
+			course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+		);
+		let englishfilteredCourses = englishCourses.filter((course) =>
+			course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+		);
 		let mathfilteredCourses = mathCourses.filter((course) =>
-			course["course name"].toLowerCase().includes("")
+			course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
 		);
 		let sciencefilteredCourses = scienceCourses.filter((course) =>
-			course["course name"].toLowerCase().includes("")
+			course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
 		);
 		let languagefilteredCourses = languageCourses.filter((course) =>
-			course["course name"].toLowerCase().includes("")
+			course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
 		);
 		let artfilteredCourses = artCourses.filter((course) =>
-			course["course name"].toLowerCase().includes("")
+			course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+		);
+		let electivefilteredCourses = electiveCourses.filter((course) =>
+			course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
 		);
 
+		allFilteredCourses = allFilteredCourses.concat(histsocfilteredCourses);
+		allFilteredCourses = allFilteredCourses.concat(englishfilteredCourses);
 		allFilteredCourses = allFilteredCourses.concat(mathfilteredCourses);
 		allFilteredCourses = allFilteredCourses.concat(sciencefilteredCourses);
 		allFilteredCourses = allFilteredCourses.concat(languagefilteredCourses);
 		allFilteredCourses = allFilteredCourses.concat(artfilteredCourses);
+		allFilteredCourses = allFilteredCourses.concat(electivefilteredCourses);
 
 		setFilteredCourses(allFilteredCourses);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}
+
+	useEffect(() => {
+		
+		showAllCourses()
+		// eslint-disable-next-line
 	}, []);
 
-	const getCourseClassNameAndColor = (course) => {
-		if (course["a-g_satisfies"].includes("C")) {
-			return `red info-sphere`;
-		} else if (course["a-g_satisfies"].includes("D")) {
-			return `purple info-sphere`;
-		} else if (course["a-g_satisfies"].includes("E")) {
-			return `green info-sphere`;
-		} else if (course["a-g_satisfies"].includes("F")) {
-			return `coral info-sphere`;
-		}
-	};
+	// const getCourseClassNameAndColor = (course) => {
+	// 	if (course["a-g_satisfies"].includes("A")) {
+	// 		return `orange info-sphere`;
+	// 	} else if (course["a-g_satisfies"].includes("B")) {
+	// 		return `blue info-sphere`;
+	// 	} else if (course["a-g_satisfies"].includes("C")) {
+	// 		return `red info-sphere`;
+	// 	} else if (course["a-g_satisfies"].includes("D")) {
+	// 		return `purple info-sphere`;
+	// 	} else if (course["a-g_satisfies"].includes("E")) {
+	// 		return `green info-sphere`;
+	// 	} else if (course["a-g_satisfies"].includes("F")) {
+	// 		return `coral info-sphere`;
+	// 	} else if (course["a-g_satisfies"].includes("G")) {
+	// 		return `lightblue info-sphere`;
+	// 	}
+	// };
+
+	const resetAllFilters = () => {
+		setToggledPeriods({
+			'0' : false,
+			'1' : false,
+			'2' : false,
+			'3' : false,
+			'4' : false,
+			'5' : false,
+			'6' : false,
+		})
+		setToggledRequirements({
+			'A' : false,
+			'B' : false,
+			'C' : false,
+			'D' : false,
+			'E' : false,
+			'F' : false,
+			'G' : false,
+	
+		})
+
+		let checks = document.querySelectorAll('input:checked')
+		checks = [...checks]
+		checks.map( chkbx => chkbx.checked = false)
+		showAllCourses()
+	}
 
 	const handleToggle = ( requirement ) => {
 		console.log('requirement ' + requirement + ' toggled')
@@ -667,8 +1082,91 @@ const Courses = () => {
 			case 'requirements_toggle':
 				setFilterRequirementsToggle( ! filterRequirementsToggled )
 				break;
-			
+			case 'reset':
+				setFilterBy('')
+				showAllCourses()
+				resetAllFilters()
+				break;
+			default:
+				break;	
 		}
+	}
+
+	const handlePeriodToggle = ( period ) => {
+		let newToggledPeriod = toggledPeriods;
+		newToggledPeriod[period] = !newToggledPeriod[period]
+
+		console.log('new toggle matrix')
+		console.log(newToggledPeriod)
+		setToggledPeriods(newToggledPeriod)
+	}
+
+	const handleRequirementsToggle = ( requirement ) => {
+		
+		let newToggledRequirements = toggledRequirements;
+		newToggledRequirements[requirement] = !newToggledRequirements[requirement]
+
+		let allFilteredCourses = [];
+
+		for (const [key, value] of Object.entries(newToggledRequirements)) {
+
+			// console.log(`key = ${key} value = ${value}`)
+			if( value && key === 'A')
+			{
+				let histsocfilteredCourses = histsocCourses.filter((course) =>
+					course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+				);
+				allFilteredCourses = allFilteredCourses.concat(histsocfilteredCourses);
+			}
+			else if( value && key === 'B')
+			{
+				let englishfilteredCourses = englishCourses.filter((course) =>
+					course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+				);
+				allFilteredCourses = allFilteredCourses.concat(englishfilteredCourses);
+			}
+			else if( value && key === 'C')
+			{
+				let mathfilteredCourses = mathCourses.filter((course) =>
+					course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+				);
+				allFilteredCourses = allFilteredCourses.concat(mathfilteredCourses);
+			}
+			else if( value && key === 'D')
+			{
+				let sciencefilteredCourses = scienceCourses.filter((course) =>
+					course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+				);
+				allFilteredCourses = allFilteredCourses.concat(sciencefilteredCourses);
+			}
+			else if( value && key === 'E')
+			{
+				let languagefilteredCourses = languageCourses.filter((course) =>
+					course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+				);
+				allFilteredCourses = allFilteredCourses.concat(languagefilteredCourses);
+			}
+			else if( value && key === 'F')
+			{
+				let artfilteredCourses = artCourses.filter((course) =>
+					course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+				);
+				allFilteredCourses = allFilteredCourses.concat(artfilteredCourses);
+			}
+			else if( value && key === 'G')
+			{
+				let electivefilteredCourses = electiveCourses.filter((course) =>
+					course["course name"].toLowerCase().includes("") && course['grade levels'].includes(gradeLevel)
+				);
+				allFilteredCourses = allFilteredCourses.concat(electivefilteredCourses);
+			}
+		}
+			
+		setFilteredCourses(allFilteredCourses);
+
+		console.log('new requirement matrix')
+		console.log(newToggledRequirements)
+		setToggledPeriods(newToggledRequirements)
 	}
 
 	return (
@@ -678,11 +1176,13 @@ const Courses = () => {
 
 				<div className="filter-container">
 
-					<div className="first-filter-row">
-					<button onClick={ () => handleToggle('input_toggle')} className="hide-show-btn" >
-						{ !filterInputToggled ? '\u2212' : '\u002B' }
-					</button>
+{/* first-filter-row */}
+					<div className="filter-requirements-pills-container">
+						<button onClick={ () => handleToggle('input_toggle')} className="hide-show-btn" >
+							{ !filterInputToggled ? '\u2212' : '\u002B' }
+						</button>
 
+						<p>search for classes by keyword:</p>
 						<div className={ filterInputToggled ? "first-filter-inner-row hide" : "first-filter-inner-row show" }>
 							<input
 								type="text"
@@ -693,7 +1193,8 @@ const Courses = () => {
 
 							<div className="filter-general-options-container">
 								<div>show all classes / reset filters</div>
-								<button className="reset-btn">&times;</button>
+								<button onClick={ () => handleToggle('reset') }
+								className="reset-btn">&times;</button>
 
 							</div>
 						</div>
@@ -709,10 +1210,10 @@ const Courses = () => {
 						<div className="requirements-toggle-container">
 
 							{ periods.map( (period, index) => (
-								<div key={index} className="toggle-widget"><span>{period, index}</span>
+								<div key={index} className="toggle-widget"><span>{period}</span>
 									<label className="switch">
 										<input type="checkbox"/>
-										<span onClick={ () => handleToggle(period)}
+										<span onClick={ () => handlePeriodToggle(period)}
 										className="slider round"></span>
 									</label>
 								</div>
@@ -735,7 +1236,7 @@ const Courses = () => {
 									<div key={idx} className="toggle-widget"><span>{rqrmnt}</span>
 										<label className="switch">
 											<input type="checkbox"/>
-											<span onClick={ () => handleToggle(rqrmnt)}
+											<span onClick={ () => handleRequirementsToggle(rqrmnt)}
 											className="slider round"></span>
 										</label>
 									</div>
@@ -748,19 +1249,22 @@ const Courses = () => {
 				</div>
 
 
+				<div className="course-grid-wrapper">
+					{filteredCourses.length === 0 && (
+						<p>not showing any courses at the moment</p>
+					)}
+						
+					<div className="course-grid">
 
-				<div className="course-grid">
-					{filteredCourses.length > 0 &&
-						filteredCourses.map((course, index) => (
-							<div key={index} className="course-chip" id={index}>
-								<div
-									className={getCourseClassNameAndColor(
-										course
-									)}
-								></div>
-								<p className="course-info">{course["course name"]}</p>
-							</div>
-						))}
+							{filteredCourses.length > 0 &&
+								filteredCourses.map((course, index) => (
+									
+									<CourseChip key={index} course={course} index={index} wait={30 * index}/>
+												
+								))}
+						
+					</div>
+						
 				</div>
 			</div>
 		</Fragment>

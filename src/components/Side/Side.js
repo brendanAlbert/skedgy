@@ -3,7 +3,7 @@ import "./side.css";
 import SkedgyContext from "../../context/Context";
 
 const Side = () => {
-	// screenOptions : ['choiceSchedule', 'classesByTeacher', 'classesByTime', 'classesByAGRequirement', 'chooseFromAvailable']
+
 	return (
 		<SkedgyContext.Consumer>
 			{(context) => (

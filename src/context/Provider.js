@@ -5,11 +5,15 @@ import { Component } from "react";
 class Provider extends Component {
 	state = {
 		currentScreen: "choiceSchedule",
+		gradeLevel: 0,
 		screenOptions: [
 			"choiceSchedule",
 			"classesByTime",
 			"classesByAGRequirement",
 		],
+		gradeLevelOptions : [
+			9, 10, 11, 12
+		]
 	};
 
 	render() {
@@ -24,6 +28,13 @@ class Provider extends Component {
 							console.log(this.state);
 						});
 					},
+					gradeLevel: this.state.gradeLevel,
+					setGradeLevel: (level) => {
+						this.setState({ gradeLevel : level} , () => {
+							console.log('this.state after setting grade level')
+							console.log(this.state)
+						})
+					}
 				}}
 			>
 				{this.props.children}
