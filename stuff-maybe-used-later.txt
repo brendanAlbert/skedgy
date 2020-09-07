@@ -20,3 +20,96 @@
     see all classes offered which fulfill a certain A-G
     requirement
 </p>
+
+
+
+
+
+
+
+
+ORIGINAL CREATESKEDG
+
+<div className="schedules-container">
+    {choices.length > 0 &&
+        choices.map((schedj, index) => (
+            <div key={index} className="schedule">
+                <h3>{schedj} choice</h3>
+                <div className="choices-container">
+                    {periods.map((period, idx) => (
+                        <div
+                            key={idx}
+                            className="period-container"
+                        >
+                            <div className="period available">
+                                <div className="addPeriodIcon">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div className="period-time">
+                                {period} period
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        ))}
+</div>
+
+
+{choices.length < 4 && (
+    <div id="add_schedule" onClick={handleAdd}>
+        +<span>add new schedule</span>
+    </div>
+)}
+
+
+<div className="grade-level-container">
+								<p
+									onClick={() => {
+										context.setGradeLevel(9);
+										setActive(9);
+									}}
+									className={
+										active === 9 ? "bub active" : "bub"
+									}
+								>
+									freshman
+								</p>
+								<p
+									onClick={() => {
+										context.setGradeLevel(10);
+										setActive(10);
+									}}
+									className={
+										active === 10 ? "bub active" : "bub"
+									}
+								>
+									sophomore
+								</p>
+								<p
+									onClick={() => {
+										context.setGradeLevel(11);
+										setActive(11);
+									}}
+									className={
+										active === 11 ? "bub active" : "bub"
+									}
+								>
+									junior
+								</p>
+								<p
+									onClick={() => {
+										context.setGradeLevel(12);
+										setActive(12);
+									}}
+									className={
+										active === 12 ? "bub active" : "bub"
+									}
+								>
+									senior
+								</p>
+
+								
+							</div>

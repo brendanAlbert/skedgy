@@ -1,0 +1,958 @@
+{
+    "9th": {
+        "0_period": {
+            "physed": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "physical education"
+                },
+                {
+                    "teacher": "ms. jones",
+                    "class": "color guard / PE"
+                },
+                {
+                    "teacher": "ms. black",
+                    "class": "marching band / PE *fall only"
+                },
+                {
+                    "teacher": "ms. bell",
+                    "class": "professional dance 1"
+                }
+            ],
+            "english": [
+                {
+                    "teacher": "ms. johnson",
+                    "class": "english 9"
+                },
+                {
+                    "teacher": "mr. last",
+                    "class": "english 9 honors"
+                },
+                {
+                    "teacher": "mr. zeidema",
+                    "class": "ucci english 9: performing arts"
+                }
+            ],
+            "math": [
+                {
+                    "teacher": "ms. shukla",
+                    "class": "math 1 honors"
+                },
+                {
+                    "teacher": "ms. johannsen",
+                    "class": "math 2"
+                },
+                {
+                    "teacher": "ms. lee",
+                    "class": "math 2 honors"
+                },
+                {
+                    "teacher": "mr. anderson",
+                    "class": "math 3 honors"
+                }
+            ],
+            "science": [
+                {
+                    "teacher": "mr. bellview",
+                    "class": "earth science"
+                },
+                {
+                    "teacher": "mr. rossi",
+                    "class": "biology honors"
+                }
+            ],
+            "college_career": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "avid 9"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus arts media"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "foundations of tech + engineering"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus aviation"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus medical"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus education"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "law and order"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "criminal justice"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "professional dance"
+                }
+            ],
+            "lang_elective": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1 online"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "french 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 2"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "journalism"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "yearbook"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "academic support"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "leadership (asb) *elected"
+                }
+            ]
+        },
+        "1_period": {
+            "physed": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "physical education"
+                },
+                {
+                    "teacher": "ms. daisy",
+                    "class": "professional dance 1"
+                }
+            ],
+            "english": [
+                {
+                    "teacher": "ms. johnson",
+                    "class": "english 9"
+                },
+                {
+                    "teacher": "mr. last",
+                    "class": "english 9 honors"
+                },
+                {
+                    "teacher": "mr. zeidema",
+                    "class": "ucci english 9: performing arts"
+                }
+            ],
+            "math": [
+                {
+                    "teacher": "mr. roberts",
+                    "class": "math 1"
+                },
+                {
+                    "teacher": "ms. shukla",
+                    "class": "math 1 honors"
+                },
+                {
+                    "teacher": "ms. johannsen",
+                    "class": "math 2"
+                },
+                {
+                    "teacher": "ms. lee",
+                    "class": "math 2 honors"
+                },
+                {
+                    "teacher": "mr. anderson",
+                    "class": "math 3 honors"
+                }
+            ],
+            "science": [
+                {
+                    "teacher": "mr. bellview",
+                    "class": "earth science"
+                },
+                {
+                    "teacher": "mr. rossi",
+                    "class": "biology"
+                },
+                {
+                    "teacher": "mrs. harper",
+                    "class": "biology honors"
+                }
+            ],
+            "college_career": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "avid 9"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus arts media"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "foundations of tech + engineering"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus aviation"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus medical"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus education"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "law and order"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "criminal justice"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "professional dance"
+                }
+            ],
+            "lang_elective": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1 online"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "french 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 2"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "journalism"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "yearbook"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "academic support"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "leadership (asb) *elected"
+                }
+            ]
+        },
+        "2_period": {
+            "physed": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "physical education"
+                },
+                {
+                    "teacher": "ms. bell",
+                    "class": "professional dance 1"
+                }
+            ],
+            "english": [
+                {
+                    "teacher": "ms. johnson",
+                    "class": "english 9"
+                },
+                {
+                    "teacher": "mr. last",
+                    "class": "english 9 honors"
+                },
+                {
+                    "teacher": "mr. zeidema",
+                    "class": "ucci english 9: performing arts"
+                }
+            ],
+            "math": [
+                {
+                    "teacher": "mr. roberts",
+                    "class": "math 1"
+                },
+                {
+                    "teacher": "ms. johannsen",
+                    "class": "math 2"
+                },
+                {
+                    "teacher": "ms. lee",
+                    "class": "math 2 honors"
+                }
+            ],
+            "science": [
+                {
+                    "teacher": "mr. bellview",
+                    "class": "earth science"
+                },
+                {
+                    "teacher": "mr. rossi",
+                    "class": "biology"
+                }
+            ],
+            "college_career": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "avid 9"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus arts media"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "foundations of tech + engineering"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus aviation"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus medical"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus education"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "law and order"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "criminal justice"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "professional dance"
+                }
+            ],
+            "lang_elective": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1 online"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "french 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 2"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "journalism"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "yearbook"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "academic support"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "leadership (asb) *elected"
+                }
+            ]
+        },
+        "3_period": {
+            "physed": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "physical education"
+                },
+                {
+                    "teacher": "ms. jones",
+                    "class": "color guard / PE"
+                },
+                {
+                    "teacher": "ms. daisy",
+                    "class": "professional dance 1"
+                }
+            ],
+            "english": [
+                {
+                    "teacher": "ms. johnson",
+                    "class": "english 9"
+                },
+                {
+                    "teacher": "mr. last",
+                    "class": "english 9 honors"
+                },
+                {
+                    "teacher": "mr. zeidema",
+                    "class": "ucci english 9: performing arts"
+                }
+            ],
+            "math": [
+                {
+                    "teacher": "mr. roberts",
+                    "class": "math 1"
+                },
+                {
+                    "teacher": "ms. shukla",
+                    "class": "math 1 honors"
+                },
+                {
+                    "teacher": "ms. johannsen",
+                    "class": "math 2"
+                },
+                {
+                    "teacher": "ms. lee",
+                    "class": "math 2 honors"
+                },
+                {
+                    "teacher": "mr. anderson",
+                    "class": "math 3 honors"
+                }
+            ],
+            "science": [
+                {
+                    "teacher": "mr. bellview",
+                    "class": "earth science"
+                },
+                {
+                    "teacher": "mrs. harper",
+                    "class": "biology honors"
+                }
+            ],
+            "college_career": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "avid 9"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus arts media"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "foundations of tech + engineering"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus aviation"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus medical"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus education"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "law and order"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "criminal justice"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "professional dance"
+                }
+            ],
+            "lang_elective": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1 online"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "french 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 2"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "journalism"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "yearbook"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "academic support"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "leadership (asb) *elected"
+                }
+            ]
+        },
+        "4_period": {
+            "physed": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "physical education"
+                },
+                {
+                    "teacher": "ms. bell",
+                    "class": "professional dance 1"
+                }
+            ],
+            "english": [
+                {
+                    "teacher": "ms. johnson",
+                    "class": "english 9"
+                }
+            ],
+            "math": [
+                {
+                    "teacher": "mr. roberts",
+                    "class": "math 1"
+                },
+                {
+                    "teacher": "ms. shukla",
+                    "class": "math 1 honors"
+                },
+                {
+                    "teacher": "ms. johannsen",
+                    "class": "math 2"
+                },
+                {
+                    "teacher": "ms. lee",
+                    "class": "math 2 honors"
+                },
+                {
+                    "teacher": "mr. anderson",
+                    "class": "math 3 honors"
+                }
+            ],
+            "science": [
+                {
+                    "teacher": "mr. rossi",
+                    "class": "biology"
+                },
+                {
+                    "teacher": "mrs. harper",
+                    "class": "biology honors"
+                }
+            ],
+            "college_career": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "avid 9"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus arts media"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "foundations of tech + engineering"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus aviation"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus medical"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus education"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "law and order"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "criminal justice"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "professional dance"
+                }
+            ],
+            "lang_elective": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1 online"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "french 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 2"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "journalism"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "yearbook"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "academic support"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "leadership (asb) *elected"
+                }
+            ]
+        },
+        "5_period": {
+            "physed": [
+                {
+                    "teacher": "ms. bell",
+                    "class": "professional dance 1"
+                },
+                {
+                    "teacher": "ms. rogers",
+                    "class": "athletics"
+                },
+                {
+                    "teacher": "mr. hopper",
+                    "class": "athletics"
+                }
+            ],
+            "english": [
+                {
+                    "teacher": "mr. last",
+                    "class": "english 9 honors"
+                },
+                {
+                    "teacher": "mr. zeidema",
+                    "class": "ucci english 9: performing arts"
+                }
+            ],
+            "math": [
+                {
+                    "teacher": "mr. roberts",
+                    "class": "math 1"
+                }
+            ],
+            "science": [
+                {
+                    "teacher": "mr. bellview",
+                    "class": "earth science"
+                },
+                {
+                    "teacher": "mr. rossi",
+                    "class": "biology"
+                },
+                {
+                    "teacher": "mrs. harper",
+                    "class": "biology honors"
+                }
+            ],
+            "college_career": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "avid 9"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus arts media"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "foundations of tech + engineering"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus aviation"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus medical"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus education"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "law and order"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "criminal justice"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "professional dance"
+                }
+            ],
+            "lang_elective": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1 online"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "french 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 2"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "journalism"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "yearbook"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "academic support"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "leadership (asb) *elected"
+                }
+            ]
+        },
+        "6_period": {
+            "physed": [
+                {
+                    "teacher": "ms. daisy",
+                    "class": "professional dance 1"
+                },
+                {
+                    "teacher": "ms. rogers",
+                    "class": "athletics"
+                },
+                {
+                    "teacher": "mr. hopper",
+                    "class": "athletics"
+                }
+            ],
+            "english": [
+                {
+                    "teacher": "ms. johnson",
+                    "class": "english 9"
+                }
+            ],
+            "math": [
+                {
+                    "teacher": "mr. daniels",
+                    "class": "math 1"
+                }
+            ],
+            "science": [
+                {
+                    "teacher": "mr. bellview",
+                    "class": "earth science"
+                }
+            ],
+            "college_career": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "avid 9"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus arts media"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "foundations of tech + engineering"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus aviation"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus medical"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "career focus education"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "law and order"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "criminal justice"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "professional dance"
+                }
+            ],
+            "lang_elective": [
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "chinese 1 online"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "french 1"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "spanish 2"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "ap human geography"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "journalism"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "yearbook"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "academic support"
+                },
+                {
+                    "teacher": "mr. smith",
+                    "class": "leadership (asb) *elected"
+                }
+            ]
+        }
+    }
+}

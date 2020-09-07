@@ -1,0 +1,4 @@
+{
+	"connectionString": "mongodb://localhost/skedgy-login",
+	"secret": "super secret secrets"
+}

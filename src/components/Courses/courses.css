@@ -2,7 +2,7 @@
 	width: 90%;
 
 	margin: 0 auto;
-	
+
 	transition: all 0s linear;
 }
 
@@ -59,7 +59,7 @@
 	margin: 0 auto;
 }
 
-input {
+.first-filter-inner-row input {
 	width: 40%;
 
 	padding: 10px 30px;
@@ -123,8 +123,6 @@ input:focus {
 	background-color: #70a1ff;
 }
 
-
-
 .filter-general-options-container {
 	display: flex;
 	flex-direction: column;
@@ -137,11 +135,9 @@ input:focus {
 .filter-periods-pills-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-
 }
 
 .filter-requirements-pills-container {
-	
 	position: relative;
 	margin: 15px auto;
 	flex-direction: column;
@@ -149,15 +145,13 @@ input:focus {
 	align-items: center;
 	background-color: #eee;
 	border-radius: 10px;
-	padding: 20px
+	padding: 20px;
 }
 
 .filter-requirements-pills-container p {
 	line-height: 1;
 	max-width: 85%;
 }
-
-
 
 .requirements-toggle-container {
 	padding-top: 10px;
@@ -213,8 +207,6 @@ input:checked + .slider {
 
 /* input:checked + .slider:focus { outline: 0;} */
 
-
-
 input:checked + .slider:before {
 	-webkit-transform: translateX(16px);
 	-ms-transform: translateX(16px);
@@ -226,13 +218,12 @@ input:checked:focus + .slider:before {
 	-ms-transform: translateX(16px);
 	transform: translateX(16px); */
 	outline: 0;
-	
 }
 
 .slider.round {
 	border-radius: 34px;
 	outline: 0;
-	-webkit-tap-highlight-color: transparent
+	-webkit-tap-highlight-color: transparent;
 }
 
 .slider.round:before {
@@ -263,14 +254,14 @@ input:checked:focus + .slider:before {
 	background-color: #ff4757;
 	border: 2px solid #ff4757;
 	box-shadow: 1px 2px 0px 1px #ccc;
-	-webkit-tap-highlight-color: transparent
+	-webkit-tap-highlight-color: transparent;
 }
 
 .reset-btn:active {
 	transform: translateY(2px);
 	box-shadow: 1px 1px 0px 0px #ccc;
 	transition: transform 0.1s linear;
-	-webkit-tap-highlight-color: transparent
+	-webkit-tap-highlight-color: transparent;
 }
 
 .reset-btn:focus {
@@ -305,7 +296,7 @@ input:checked:focus + .slider:before {
 	top: 8px;
 	border: none;
 	font-size: 30px;
-	border-radius: 10px;;
+	border-radius: 10px;
 	right: 8px;
 	line-height: 20px;
 	padding: 4px 12px;
@@ -316,7 +307,7 @@ input:checked:focus + .slider:before {
 	align-items: center;
 	outline: none;
 	cursor: pointer;
-	-webkit-tap-highlight-color: transparent
+	-webkit-tap-highlight-color: transparent;
 }
 
 .hide-show-btn:hover {
@@ -324,18 +315,15 @@ input:checked:focus + .slider:before {
 }
 
 .hide {
-
 	position: relative;
 	opacity: 0;
 	margin: 0;
-	
+
 	max-height: 0px;
 	transition: max-height 0.3s ease, opacity 0s ease, margin 0.4s ease;
-
 }
 
 .show {
-	
 	position: relative;
 	opacity: 1;
 	transition: flex 0.3s ease, max-height 0.3s ease, opacity 0.2s ease;
@@ -344,10 +332,10 @@ input:checked:focus + .slider:before {
 
 .first-filter-inner-row.show {
 	max-height: 50px;
+	/* transition: flex 0.3s ease, max-height 0.3s ease, opacity 0.2s ease; */
 }
 
 @media screen and (max-width: 740px) {
-
 	.show {
 		max-height: 140px;
 	}
@@ -373,19 +361,18 @@ input:checked:focus + .slider:before {
 	}
 }
 
-
 @media screen and (max-width: 440px) {
-
 	.show {
 		max-height: 200px;
 	}
 }
 
-.periods-inner, .requirements-inner {
+.periods-inner,
+.requirements-inner {
 	width: 90%;
 }
 
-.periods-inner.hide .requirements-toggle-container, 
+.periods-inner.hide .requirements-toggle-container,
 .requirements-inner.hide .requirements-toggle-container {
 	pointer-events: none;
 }
@@ -426,14 +413,26 @@ input:checked:focus + .slider:before {
 }
 
 @keyframes fadein {
-	from { opacity: 0;}
-	to { opacity: 2;}
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 2;
+	}
 }
 @-moz-keyframes fadein {
-	from { opacity: 0;}
-	to { opacity: 2;}
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 2;
+	}
 }
 @-webkit-keyframes fadein {
-	from { opacity: 0;}
-	to { opacity: 2;}
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 2;
+	}
 }
